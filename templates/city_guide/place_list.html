@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Place List
+    <a href="{% url 'city_guide:place-create' %}" class="btn btn-primary link-to-page">
+      Create
+    </a>
+  </h1>
+
+  <br>
+
+  {% if place_list %}
+    {% for place in place_list %}
+      <div class="partition">
+        <div class="image_div">
+          <img class="image" src="{{ place.image_url }}" alt="Place image">
+        </div>
+        <div class="info">
+          <a href="{% url "city_guide:place-detail" pk=place.id %}">{{ place.name }}</a>
+          <p>
+            Location: {{ place.location }}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>There are no places in the service.</p>
+  {% endif %}
+
+{% endblock %}

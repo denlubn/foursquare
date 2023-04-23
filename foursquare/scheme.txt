@@ -1,0 +1,24 @@
+User
+Place
+comments
+questions
+
+main
+list places (image, name, location)
+
+detail place (list comments + questions)
+
+comments (username + text + photo/video) + комментар
+
+questions(username + text) + питання
+user - manager
+
+# admin
+indicate ques comment for places and underline in description
+
+success url
+place
+user
+ comment quetion
+ access admin
+ photo
